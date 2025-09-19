@@ -1,0 +1,72 @@
+﻿@import "tailwindcss";
+
+/* Light theme with enhanced readability */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+@keyframes soft-glow {
+  0%, 100% { box-shadow: 0 0 15px rgba(237, 157, 42, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(237, 157, 42, 0.4); }
+}
+
+/* Animation utilities */
+.animate-gradient-x { animation: gradient-x 20s ease infinite; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-soft-glow { animation: soft-glow 4s ease-in-out infinite; }
+
+/* Light theme text gradients */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #0f172a, #334155, #475569);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #ed9d2a, #de8820, #b8701d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Content typography - optimized for readability */
+.content-text {
+  font-family: var(--font-crimson), Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #334155;
+  font-weight: 400;
+}
+
+.heading-text {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Enhanced readability utilities */
+.text-readable {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #475569;
+}
+
+.text-large {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.text-xl-readable {
+  font-size: 1.375rem;
+  line-height: 1.8;
+  font-weight: 500;
+}

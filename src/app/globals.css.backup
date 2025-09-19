@@ -1,0 +1,53 @@
+﻿@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* High contrast historical theme */
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 25px rgba(217, 119, 6, 0.4); }
+  50% { box-shadow: 0 0 45px rgba(217, 119, 6, 0.7); }
+}
+
+/* Enhanced readability utilities */
+.animate-gradient-x { animation: gradient-x 18s ease infinite; }
+.animate-float { animation: float 8s ease-in-out infinite; }
+.animate-glow { animation: glow-pulse 5s ease-in-out infinite; }
+
+/* High contrast text gradients */
+.text-gradient-bronze {
+  background: linear-gradient(135deg, #f59e0b, #d97706, #92400e);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Content typography */
+.content-text {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #fef3c7;
+}
+
+.heading-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+}
