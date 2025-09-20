@@ -51,14 +51,30 @@ function MinhFoundationContent({ content }: { content: string }) {
     {
       icon: "⚠️",
       title: "Quan liêu",
-      content: "Xa rời thực tế, coi thường ý kiến nhân dân, chỉ đạo từ trên xuống mà không lắng nghe từ cơ sở.",
-      color: "red" as const
+      content: (
+        <div>
+          <p className="mb-3">Xa rời thực tế, coi thường ý kiến nhân dân, chỉ đạo từ trên xuống mà không lắng nghe từ cơ sở.</p>
+          <p className="text-sm text-yellow-100 font-semibold animate-pulse hover:animate-bounce hover:text-yellow-50 transition-all duration-300 cursor-pointer">
+            ✨ Nhấp vào để xem chi tiết
+          </p>
+        </div>
+      ),
+      color: "red" as const,
+      href: "https://noichinh.vn/hoc-tap-va-lam-theo-tam-guong-dao-duc-hcm/202203/tu-tuong-ho-chi-minh-ve-phong-chong-tham-nhung-lang-phi-quan-lieu-va-chong-chu-nghia-ca-nhan-310750"
     },
     {
       icon: "💰", 
       title: "Tham nhũng",
-      content: "Lợi dụng quyền lực để mưu lợi cá nhân, làm tổn hại uy tín và hình ảnh của Đảng.",
-      color: "purple" as const
+      content: (
+        <div>
+          <p className="mb-3">Lợi dụng quyền lực để mưu lợi cá nhân, làm tổn hại uy tín và hình ảnh của Đảng.</p>
+          <p className="text-sm text-pink-100 font-semibold animate-pulse hover:animate-bounce hover:text-pink-50 transition-all duration-300 cursor-pointer">
+            ✨ Nhấp vào để xem chi tiết
+          </p>
+        </div>
+      ),
+      color: "purple" as const,
+      href: "/minh/tham-nhung"
     },
     {
       icon: "👥",

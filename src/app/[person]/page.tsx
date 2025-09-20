@@ -5,9 +5,9 @@ import { AnimatedCard } from "@/components/animated-card";
 import { AdaptiveContent } from "@/components/adaptive-content";
 
 interface PersonPageProps {
-  params: {
+  params: Promise<{
     person: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
