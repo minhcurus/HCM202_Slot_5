@@ -55,6 +55,8 @@ export default async function HomePage() {
             </p>
           </audio>
         </div>
+
+    
       </AnimatedCard>
 
       <Suspense
@@ -65,7 +67,23 @@ export default async function HomePage() {
         }
       >
         <CardGrid personsWithContent={personsWithContent} />
+
       </Suspense>
+
+           <AnimatedCard gradient="purple" className="text-center mb-16">
+        {/* Video Player */}
+        <div className="mt-6 max-w-2xl mx-auto">
+          <video controls className="w-full h-300px rounded-lg shadow-lg">
+            <source src="/presentation.mp4" type="video/mp4" />
+            <p>
+              Trình duyệt của bạn không hỗ trợ phát video. Tải xuống{" "}
+              <a href="/presentation.mp4" className="text-amber-300 underline">
+                tại đây
+              </a>.
+            </p>
+          </video>
+        </div>
+      </AnimatedCard>
     </div>
   );
 }
