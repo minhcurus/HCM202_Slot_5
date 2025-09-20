@@ -15,7 +15,7 @@ export function SiteHeader() {
         <div className="mr-4 flex">
           <Link 
             href="/" 
-            className="mr-6 flex items-center space-x-2 text-slate-800 font-bold text-xl hover:scale-105 transition-transform heading-text hover:text-blue-700"
+            className="mr-6 flex items-center space-x-2 text-slate-800 font-bold text-2xl hover:scale-105 transition-transform heading-text hover:text-blue-700"
           >
             Chương 4: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân
           </Link>

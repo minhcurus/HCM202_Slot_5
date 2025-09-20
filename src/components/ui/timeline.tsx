@@ -25,7 +25,7 @@ export function TimelineStep({ number, title, content, isLast = false }: Timelin
       
       {/* Number circle */}
       <motion.div 
-        className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg"
+        className="flex-shrink-0 w-18 h-18 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center shadow-lg"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
@@ -33,9 +33,9 @@ export function TimelineStep({ number, title, content, isLast = false }: Timelin
       </motion.div>
       
       {/* Content */}
-      <div className="flex-1 bg-slate-50/90 backdrop-blur-sm rounded-xl p-6 shadow-md border border-blue-200/50">
-        <h3 className="text-xl font-bold text-slate-800 mb-4 font-inter">{title}</h3>
-        <div className="text-slate-700 leading-relaxed font-crimson">
+      <div className="flex-1 bg-slate-50/90 backdrop-blur-sm rounded-xl p-7 shadow-md border border-blue-200/50">
+        <h3 className="text-xl font-bold text-slate-800 mb-5 font-inter">{title}</h3>
+        <div className="text-slate-700 leading-relaxed font-crimson text-lg">
           {content}
         </div>
       </div>

@@ -12,14 +12,14 @@ interface PrincipleItemProps {
 export function PrincipleItem({ title, description, examples }: PrincipleItemProps) {
   return (
     <motion.div
-      className="bg-slate-50/95 backdrop-blur-sm rounded-xl p-6 shadow-lg border-l-4 border-blue-500"
+      className="bg-slate-50/95 backdrop-blur-sm rounded-xl p-7 shadow-lg border-l-4 border-blue-500"
       whileHover={{ x: 8, scale: 1.02 }}
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h4 className="text-lg font-bold text-slate-800 mb-3 font-inter">{title}</h4>
-      <div className="text-slate-700 mb-4 font-crimson leading-relaxed">
+      <h4 className="text-xl font-bold text-slate-800 mb-4 font-inter">{title}</h4>
+      <div className="text-slate-700 mb-5 font-crimson leading-relaxed text-lg">
         {description}
       </div>
       {examples.length > 0 && (
@@ -27,13 +27,13 @@ export function PrincipleItem({ title, description, examples }: PrincipleItemPro
           {examples.map((example, index) => (
             <motion.div
               key={index}
-              className="flex items-start gap-2"
+              className="flex items-start gap-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: index * 0.1 }}
             >
               <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
-              <span className="text-slate-600 font-crimson text-sm">{example}</span>
+              <span className="text-slate-600 font-crimson text-base">{example}</span>
             </motion.div>
           ))}
         </div>
