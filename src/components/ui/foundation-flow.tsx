@@ -19,7 +19,7 @@ export function FoundationBlock({ title, content, quote, author }: FoundationBlo
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.6 }}
     >
-      <h3 className="text-2xl font-bold text-slate-800 mb-7 font-inter text-center">{title}</h3>
+      <h3 className="text-3xl font-bold text-slate-800 mb-7 font-inter text-center tracking-wide border-b-2 border-slate-400 pb-3">{title}</h3>
       
       <div className="text-slate-700 leading-relaxed font-crimson mb-7 text-xl">
         {content}
