@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ChevronDown, Quote, Heart, Shield, Scale, Users, Eye, Target, Link, Globe, CheckCircle, AlertTriangle, FileX, TrendingDown, Ban, DollarSign, UserX, Building } from "lucide-react";
 
 export default function BaoPartyPurityContent() {
@@ -201,6 +202,26 @@ export default function BaoPartyPurityContent() {
         </h1>
         
         <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-yellow-500 mx-auto rounded-full"></div>
+
+        {/* Main Image */}
+        <motion.div
+          className="mt-8 max-w-4xl mx-auto"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <Image
+              src="/image/bao_1.jpg"
+              alt="Niềm tin của nhân dân - Yếu tố sống còn của Đảng"
+              width={1200}
+              height={600}
+              className="w-full h-auto object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+          </div>
+        </motion.div>
       </motion.div>
 
       {/* Interactive Accordion Sections */}
@@ -327,6 +348,25 @@ export default function BaoPartyPurityContent() {
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Các nguyên tắc Hồ Chí Minh đề ra - Những viên gạch xây dựng nền tảng niềm tin vững chắc
           </p>
+
+          {/* Section Image */}
+          <motion.div
+            className="mt-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/image/bao_2.jpg"
+                alt="Những viên gạch xây dựng nền tảng niềm tin"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Two Column Layout */}
@@ -493,6 +533,25 @@ export default function BaoPartyPurityContent() {
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Những hậu quả nghiêm trọng khi không tuân thủ các nguyên tắc của Đảng
           </p>
+
+          {/* Section Image */}
+          <motion.div
+            className="mt-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/image/bao_3.jpg"
+                alt="Khi nguyên tắc bị buông lỏng"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Simple List Layout */}
@@ -583,6 +642,25 @@ export default function BaoPartyPurityContent() {
           </h2>
           
           <div className="w-32 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
+
+          {/* Section Image */}
+          <motion.div
+            className="mt-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <div className="relative overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src="/image/bao_4.jpg"
+                alt="Giữ lấy niềm tin"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            </div>
+          </motion.div>
         </div>
 
         {/* Main Message */}
