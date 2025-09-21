@@ -7,7 +7,7 @@ interface AnimatedCardProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  gradient?: 'purple' | 'blue' | 'pink' | 'green' | 'orange';
+  gradient?: 'purple' | 'blue' | 'pink' | 'green' | 'orange' | 'gold';
 }
 
 export function AnimatedCard({ 
@@ -21,7 +21,9 @@ export function AnimatedCard({
     blue: 'bg-gradient-to-br from-blue-50/95 to-indigo-100/90 border-blue-300/60 shadow-xl',
     pink: 'bg-gradient-to-br from-indigo-50/95 to-slate-100/90 border-slate-300/60 shadow-xl',
     green: 'bg-gradient-to-br from-slate-100/95 to-blue-50/90 border-blue-400/60 shadow-xl',
-    orange: 'bg-gradient-to-br from-blue-100/95 to-slate-50/90 border-indigo-400/60 shadow-xl'
+    orange: 'bg-gradient-to-br from-blue-100/95 to-slate-50/90 border-indigo-400/60 shadow-xl',
+    gold: 'bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-500'
+
   };
 
   return (
