@@ -3,6 +3,10 @@ import { ConceptGrid } from "@/components/ui/concept-cards";
 import { PrinciplesList } from "@/components/ui/principles-list";
 import { FoundationBlock, HistoricalFlow } from "@/components/ui/foundation-flow";
 import { MdContent } from "@/components/md-content";
+import ExpandableCardsGrid from "@/components/ui/expandable-cards";
+import ConditionCard from "@/components/ui/condition-card-new";
+import PracticalConnection from "@/components/ui/practical-connection-fixed";
+import AnimatedConclusion from "@/components/ui/animated-conclusion";
 
 interface AdaptiveContentProps {
   person: string;
@@ -111,56 +115,74 @@ function MinhFoundationContent({ content }: { content: string }) {
   );
 }
 
-// Nhân: Structured Timeline
+// Nhân: Leadership Role Content
 function NhanTimelineContent({ content }: { content: string }) {
-  const timelineSteps = [
+  const leadershipRoles = [
     {
-      number: "1",
-      title: "Đảng là lực lượng lãnh đạo duy nhất",
+      icon: "📜",
+      title: "Hoạch định đường lối",
       content: (
-        <ul className="space-y-2">
-          <li>• Chủ thể hoạch định đường lối, chiến lược phát triển đất nước</li>
-          <li>• Tập hợp, giác ngộ và tổ chức lực lượng quần chúng</li>
-          <li>• Gắn cách mạng Việt Nam với phong trào cách mạng thế giới</li>
-        </ul>
-      )
+        <div>
+          <p className="mb-4">Đảng đề ra cương lĩnh, đường lối, chiến lược phát triển đất nước.</p>
+          <p>Từ Cách mạng Tháng Tám 1945, Đổi mới 1986, đến Chiến lược phát triển KT-XH 2021–2030, mỗi bước ngoặt lớn đều gắn liền với sự lãnh đạo sáng suốt của Đảng.</p>
+        </div>
+      ),
+      color: "blue" as const
     },
     {
-      number: "2", 
-      title: "Vai trò lãnh đạo gắn với niềm tin nhân dân",
+      icon: "👥",
+      title: "Tập hợp, giác ngộ quần chúng",
       content: (
-        <ul className="space-y-2">
-          <li>• Vai trò lãnh đạo được nhân dân trao và củng cố bằng niềm tin</li>
-          <li>• Chỉ khi nhân dân tin tưởng, Đảng mới biến đường lối thành hành động</li>
-          <li>• Niềm tin là "chìa khóa" lãnh đạo thành công</li>
-        </ul>
-      )
+        <div>
+          <p className="mb-4">Đảng biến sức mạnh rời rạc của từng cá nhân thành sức mạnh tổng hợp của toàn dân tộc.</p>
+          <p>Nhân dân là gốc của cách mạng, là nguồn lực để Đảng thực hiện mục tiêu "dân giàu, nước mạnh, dân chủ, công bằng, văn minh".</p>
+        </div>
+      ),
+      color: "red" as const
     },
     {
-      number: "3",
-      title: "Yêu cầu đặt ra đối với Đảng cầm quyền", 
+      icon: "🌍",
+      title: "Đoàn kết quốc tế",
       content: (
-        <ul className="space-y-2">
-          <li>• Đảng phải trong sạch, vững mạnh, gắn bó mật thiết với nhân dân</li>
-          <li>• Thường xuyên đổi mới, nâng cao năng lực lãnh đạo</li>
-          <li>• Cán bộ, đảng viên nêu gương về đạo đức, lối sống</li>
-        </ul>
-      )
+        <div>
+          <p className="mb-4">Đảng gắn cách mạng Việt Nam với phong trào cách mạng thế giới.</p>
+          <p>Thông qua ngoại giao, hội nhập, Việt Nam nâng cao vị thế, trở thành bạn, đối tác tin cậy của cộng đồng quốc tế.</p>
+        </div>
+      ),
+      color: "green" as const
     },
     {
-      number: "4",
-      title: "Liên hệ thực tiễn",
+      icon: "🏛️",
+      title: "Lãnh đạo Nhà nước và xã hội",
       content: (
-        <ul className="space-y-2">
-          <li>• Trong đổi mới và hội nhập, cần niềm tin vững chắc của nhân dân</li>
-          <li>• Khi niềm tin suy giảm, vai trò lãnh đạo bị thách thức</li>
-          <li>• Giữ vững uy tín, gắn bó với dân là yêu cầu sống còn</li>
-        </ul>
-      )
+        <div>
+          <p className="mb-4">Hiến pháp 2013, Điều 4: "Đảng Cộng sản Việt Nam là lực lượng lãnh đạo Nhà nước và xã hội."</p>
+          <p>Đảng định hướng toàn bộ đời sống chính trị, kinh tế, văn hóa, xã hội, đảm bảo sự phát triển đúng hướng.</p>
+        </div>
+      ),
+      color: "purple" as const
     }
   ];
 
-  return <Timeline steps={timelineSteps} />;
+  return (
+    <div className="space-y-12">
+      <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-9 shadow-xl border border-blue-200">
+        <h4 className="text-2xl font-bold text-slate-800 mb-7 font-inter text-center">Giới thiệu chung:</h4>
+        <p className="text-slate-700 leading-relaxed font-crimson text-xl">
+          Đảng không chỉ là tổ chức chính trị, mà là lực lượng duy nhất có đủ bản lĩnh, trí tuệ và uy tín để lãnh đạo toàn dân tộc. 
+          Vai trò lãnh đạo thể hiện trên nhiều lĩnh vực:
+        </p>
+      </div>
+      
+      <ExpandableCardsGrid concepts={leadershipRoles} />
+      
+      <ConditionCard />
+      
+      <PracticalConnection />
+      
+      <AnimatedConclusion />
+    </div>
+  );
 }
 
 // Vinh: Core Values & Concepts  

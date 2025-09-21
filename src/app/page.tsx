@@ -70,18 +70,21 @@ export default async function HomePage() {
 
       </Suspense>
 
-           <AnimatedCard gradient="purple" className="text-center mb-16">
+      {/* Video Player Card - Positioned lower with centered video */}
+      <AnimatedCard gradient="purple" className="text-center mb-16 mt-20">
         {/* Video Player */}
-        <div className="mt-6 max-w-2xl mx-auto">
-          <video controls className="w-full h-300px rounded-lg shadow-lg">
-            <source src="/presentation.mp4" type="video/mp4" />
-            <p>
-              Trình duyệt của bạn không hỗ trợ phát video. Tải xuống{" "}
-              <a href="/presentation.mp4" className="text-amber-300 underline">
-                tại đây
-              </a>.
-            </p>
-          </video>
+        <div className="flex justify-center items-center py-8">
+          <div className="max-w-2xl w-full">
+            <video controls className="w-full rounded-lg shadow-lg mx-auto" style={{maxHeight: '400px'}}>
+              <source src="/presentation.mp4" type="video/mp4" />
+              <p className="text-center text-amber-100 mt-4">
+                Trình duyệt của bạn không hỗ trợ phát video. Tải xuống{" "}
+                <a href="/presentation.mp4" className="text-amber-300 underline hover:text-amber-200">
+                  tại đây
+                </a>.
+              </p>
+            </video>
+          </div>
         </div>
       </AnimatedCard>
     </div>

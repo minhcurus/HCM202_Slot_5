@@ -48,8 +48,27 @@ html {
   font-family: var(--font-crimson), Georgia, 'Times New Roman', serif;
   font-size: 1.375rem; /* Reduced from 1.5rem */
   line-height: 1.8;
-  color: #334155;
+  color: #475569;
   font-weight: 400;
+}
+
+/* Line clamp utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content-text strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.content-text em {
+  color: #64748b;
+  font-style: italic;
 }
 
 .heading-text {
@@ -60,18 +79,35 @@ html {
 
 /* Enhanced readability utilities */
 .text-readable {
-  font-size: 1.25rem; /* Reduced from 1.375rem */
+  font-size: 1.25rem;
   line-height: 1.75;
   color: #475569;
 }
 
 .text-large {
-  font-size: 1.375rem; /* Reduced from 1.5rem */
+  font-size: 1.375rem;
   line-height: 1.8;
 }
 
 .text-xl-readable {
-  font-size: 1.5rem; /* Reduced from 1.625rem */
+  font-size: 1.5rem;
   line-height: 1.8;
   font-weight: 500;
+}
+
+/* 3D Card Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
