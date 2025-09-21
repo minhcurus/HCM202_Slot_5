@@ -7,6 +7,7 @@ import ExpandableCardsGrid from "@/components/ui/expandable-cards";
 import ConditionCard from "@/components/ui/condition-card-new";
 import PracticalConnection from "@/components/ui/practical-connection-fixed";
 import AnimatedConclusion from "@/components/ui/animated-conclusion";
+import BaoPartyPurityContent from "@/components/ui/bao-party-purity";
 
 interface AdaptiveContentProps {
   person: string;
@@ -23,7 +24,7 @@ export function AdaptiveContent({ person, content }: AdaptiveContentProps) {
     case "vinh":
       return <VinhConceptContent content={content} />;
     case "bao":
-      return <BaoPrinciplesContent content={content} />;
+      return <BaoPartyPurityContent />;
     case "hung":
       return <HungSolutionsContent content={content} />;
     default:
