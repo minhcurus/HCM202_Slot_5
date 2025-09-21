@@ -35,7 +35,7 @@ const risks = [
     color: "bg-green-600",
   },
 ];
-export default function HungPage() {
+export default function HungSolutionsContent({ content }: { content?: string }){
      const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <div className="container mx-auto px-4 py-12 max-w-6xl space-y-16">

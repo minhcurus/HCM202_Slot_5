@@ -11,6 +11,7 @@ import ConditionCard from "@/components/ui/condition-card-new";
 import PracticalConnection from "@/components/ui/practical-connection-fixed";
 import AnimatedConclusion from "@/components/ui/animated-conclusion";
 import BaoPartyPurityContent from "@/components/ui/bao-party-purity";
+import HungSolutionsContent from "@/components/ui/page";
 import Image from "next/image";
 
 interface AdaptiveContentProps {
@@ -147,7 +148,7 @@ export function AdaptiveContent({ person, content }: AdaptiveContentProps) {
     case "bao":
       return <BaoPartyPurityContent />;
     case "hung":
-      return <HungSolutionsContent content={content} />;
+      return <HungSolutionsContent content={content}/>;
     default:
       return <MdContent content={content} />;
   }
@@ -588,46 +589,4 @@ function BaoPrinciplesContent({ content }: { content: string }) {
   return <PrinciplesList principles={principles} />;
 }
 
-// Hưng: Current Challenges & Solutions
-function HungSolutionsContent({ content }: { content: string }) {
-  const currentChallenges = [
-    {
-      icon: "⚡",
-      title: "Thách thức hiện nay",
-      content:
-        "Toàn cầu hóa, hội nhập quốc tế, biến đổi kinh tế - xã hội tạo ra những thách thức mới cho vai trò lãnh đạo của Đảng.",
-      color: "red" as const,
-    },
-    {
-      icon: "🛡️",
-      title: "Giải pháp củng cố",
-      content:
-        "Đẩy mạnh đấu tranh chống tham nhũng, xây dựng Đảng trong sạch, vững mạnh, nâng cao uy tín trong nhân dân.",
-      color: "blue" as const,
-    },
-    {
-      icon: "🌱",
-      title: "Tương lai phát triển",
-      content:
-        "Tiếp tục đổi mới, hiện đại hóa, giữ vững niềm tin nhân dân trong thời kỳ mới.",
-      color: "green" as const,
-    },
-  ];
 
-  return (
-    <div className="space-y-12">
-      <ConceptGrid concepts={currentChallenges} />
-
-      <FoundationBlock
-        title="Kết luận"
-        content={
-          <p>
-            Niềm tin của nhân dân là nguồn sức mạnh to lớn của Đảng. Để củng cố
-            và phát triển niềm tin này, Đảng cần tiếp tục đổi mới, hoàn thiện
-            bản thân, luôn đặt lợi ích của nhân dân lên trên hết.
-          </p>
-        }
-      />
-    </div>
-  );
-}
