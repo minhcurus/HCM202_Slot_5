@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { ConceptGrid } from "@/components/ui/concept-cards";
 import { PrinciplesList } from "@/components/ui/principles-list";
@@ -151,6 +154,256 @@ export function AdaptiveContent({ person, content }: AdaptiveContentProps) {
     default:
       return <MdContent content={content} />;
   }
+}
+
+// Hưng: Solutions & Practical Steps  
+function HungSolutionsContent({ content }: { content: string }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const risks = [
+    {
+      title: "Suy thoái tư tưởng, đạo đức, lối sống",
+      summary: "Một bộ phận cán bộ suy thoái tư tưởng chính trị, đạo đức, lối sống.",
+      detail:
+        "Đây là nguy cơ trực tiếp làm giảm uy tín của Đảng. Nếu không được chấn chỉnh kịp thời sẽ dẫn đến mất lòng tin của nhân dân, ảnh hưởng đến sự tồn vong của chế độ.",
+      color: "bg-red-500",
+    },
+    {
+      title: "Diễn biến hoà bình",
+      summary: "Âm mưu chống phá từ các thế lực thù địch, lợi dụng dân chủ để chia rẽ.",
+      detail:
+        "Các thế lực thù địch luôn tìm cách xuyên tạc, chia rẽ Đảng và Nhân dân. Phải kiên quyết đấu tranh, tăng cường bảo vệ nền tảng tư tưởng của Đảng.",
+      color: "bg-orange-500",
+    },
+    {
+      title: "Khoảng cách giàu nghèo",
+      summary: "Tham nhũng, lãng phí và bất công xã hội làm giảm niềm tin của nhân dân.",
+      detail:
+        "Khoảng cách giàu nghèo gia tăng tạo ra mâu thuẫn xã hội. Đảng cần đẩy mạnh chính sách an sinh, chống tham nhũng, bảo đảm công bằng xã hội.",
+      color: "bg-blue-600",
+    },
+    {
+      title: "Ảnh hưởng toàn cầu hoá",
+      summary: "Mặt trái của kinh tế thị trường và hội nhập quốc tế ảnh hưởng tiêu cực.",
+      detail:
+        "Toàn cầu hoá mang lại cơ hội nhưng cũng kèm theo nguy cơ bị lệ thuộc, đánh mất bản sắc. Đảng phải chủ động hội nhập, nhưng giữ vững độc lập tự chủ.",
+      color: "bg-green-600",
+    },
+  ];
+
+  return (
+    <div className="container mx-auto px-6 py-16 max-w-7xl space-y-20">
+      {/* Hero Section - Professional */}
+      <div className="text-center py-20 bg-gradient-to-b from-slate-50 to-gray-100 rounded-2xl shadow-lg border border-gray-200">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="inline-flex items-center px-6 py-3 bg-blue-50 rounded-lg text-blue-800 text-sm font-semibold mb-10 border border-blue-200">
+            <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+            Phần 5: Giải pháp thực tiễn
+          </div>
+          <h1 className="text-4xl lg:text-5xl font-bold tracking-tight mb-8 text-gray-900 leading-tight">
+            Nguy cơ hiện nay và giải pháp củng cố niềm tin
+          </h1>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8">
+            Tư tưởng Hồ Chí Minh về những thách thức đối với niềm tin của nhân dân và các giải pháp thực tiễn
+          </p>
+          <div className="flex justify-center">
+            <div className="w-24 h-1 bg-blue-600 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Section - Professional */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+        <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+          <div className="text-2xl mb-3">⚠️</div>
+          <div className="text-xl font-bold text-red-700 mb-2">4</div>
+          <div className="text-sm text-gray-600 font-medium">Nguy cơ chính</div>
+        </div>
+        <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+          <div className="text-2xl mb-3">💡</div>
+          <div className="text-xl font-bold text-green-700 mb-2">4</div>
+          <div className="text-sm text-gray-600 font-medium">Giải pháp</div>
+        </div>
+        <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+          <div className="text-2xl mb-3">🎯</div>
+          <div className="text-xl font-bold text-blue-700 mb-2">100%</div>
+          <div className="text-sm text-gray-600 font-medium">Quyết tâm</div>
+        </div>
+        <div className="text-center p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+          <div className="text-2xl mb-3">🏛️</div>
+          <div className="text-xl font-bold text-indigo-700 mb-2">∞</div>
+          <div className="text-sm text-gray-600 font-medium">Niềm tin</div>
+        </div>
+      </div>
+
+      {/* Risk Cards - Professional */}
+      <div className="relative mx-4">
+        <div className="absolute inset-0 bg-gray-50 rounded-2xl"></div>
+        <div className="relative p-8 lg:p-10">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center px-6 py-3 bg-red-50 rounded-lg text-red-800 font-semibold mb-6 border border-red-200">
+              <span className="w-2 h-2 bg-red-600 rounded-full mr-2"></span>
+              Cảnh báo quan trọng
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              🛡️ Các nguy cơ hiện nay
+            </h2>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              Nhận diện và đối phó với những thách thức đe dọa niềm tin của nhân dân
+            </p>
+          </div>
+          
+          <div className="grid gap-8 md:grid-cols-2 max-w-6xl mx-auto">
+            {risks.map((risk, index) => (
+              <div
+                key={index}
+                className={`group relative bg-white rounded-lg p-8 border border-gray-200 hover:border-gray-300 hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                  openIndex === index ? 'ring-2 ring-blue-500 shadow-xl' : ''
+                }`}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              >
+                <div className="flex items-start gap-6 mb-6">
+                  <div className={`w-12 h-12 ${risk.color} rounded-lg flex items-center justify-center text-white text-lg font-bold shadow-sm`}>
+                    {index + 1}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 group-hover:text-blue-700 transition-colors">
+                      {risk.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {risk.summary}
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    Nhấn để xem chi tiết
+                  </span>
+                  <span className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                    ↓
+                  </span>
+                </div>
+                
+                {openIndex === index && (
+                  <div className="mt-6 pt-6 border-t border-gray-200 animate-in slide-in-from-top-2 duration-300">
+                    <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-500">
+                      <h4 className="font-semibold text-blue-900 mb-3 text-sm">📋 Phân tích chi tiết:</h4>
+                      <p className="text-gray-700 leading-relaxed italic">
+                        {risk.detail}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Solutions Section - Professional */}
+      <div className="relative mx-4">
+        <div className="absolute inset-0 bg-gray-50 rounded-2xl"></div>
+        <div className="relative p-8 lg:p-10">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center px-6 py-3 bg-green-50 rounded-lg text-green-800 font-semibold mb-6 border border-green-200">
+              <span className="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
+              Hành động cụ thể
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              💡 Giải pháp thực tiễn
+            </h2>
+            <p className="text-base text-gray-600 max-w-3xl mx-auto">
+              Những biện pháp cần thiết để củng cố và bảo vệ niềm tin của nhân dân
+            </p>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: "🎯",
+                title: "Kiên định chủ nghĩa Mác – Lênin, tư tưởng Hồ Chí Minh",
+                color: "from-blue-600 to-blue-700"
+              },
+              {
+                icon: "🏛️",
+                title: "Xây dựng Đảng trong sạch, vững mạnh trên mọi mặt",
+                color: "from-green-600 to-green-700"
+              },
+              {
+                icon: "⚖️",
+                title: "Quyết liệt phòng, chống tham nhũng, tiêu cực",
+                color: "from-red-600 to-red-700"
+              },
+              {
+                icon: "👥",
+                title: "Gắn bó mật thiết với nhân dân, phát huy dân chủ & công bằng xã hội",
+                color: "from-indigo-600 to-indigo-700"
+              }
+            ].map((solution, index) => (
+              <div
+                key={index}
+                className="group relative bg-white rounded-lg p-8 shadow-md border border-gray-200 hover:shadow-xl transition-all duration-300"
+              >
+                <div className={`w-14 h-14 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center text-xl mb-6 shadow-sm group-hover:shadow-md transition-shadow`}>
+                  {solution.icon}
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-white text-sm font-bold">✓</span>
+                  </div>
+                  <p className="text-lg font-semibold text-gray-900 leading-relaxed group-hover:text-blue-700 transition-colors">
+                    {solution.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Image Section - Professional */}
+      <div className="relative mx-4">
+        <div className="absolute inset-0 bg-gray-50 rounded-2xl"></div>
+        <div className="relative text-center p-8 lg:p-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="inline-flex items-center px-6 py-3 bg-blue-50 rounded-lg text-blue-800 font-semibold mb-10 border border-blue-200">
+              <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+              Minh chứng lịch sử
+            </div>
+            
+            <div className="relative group mb-8">
+              <div className="relative w-full max-w-4xl mx-auto h-[32rem] overflow-hidden rounded-xl shadow-lg">
+                <Image
+                  src="/image/hung_1.jpg"
+                  alt="Niềm tin của nhân dân"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <p className="text-xl lg:text-2xl font-semibold text-center drop-shadow-md">
+                    "Niềm tin của nhân dân là nền tảng để Đảng vững bước"
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-md border border-gray-200 max-w-4xl mx-auto">
+              <blockquote className="text-xl lg:text-2xl font-medium text-gray-800 leading-relaxed text-center mb-4">
+                "Đảng ta muốn tồn tại và phát triển, phải luôn giữ gìn sự trong sạch về tư tưởng, đạo đức, tác phong"
+              </blockquote>
+              <cite className="block text-lg font-semibold text-blue-700">
+                - Chủ tịch Hồ Chí Minh
+              </cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 // Minh: Foundation & Historical Context
@@ -588,46 +841,4 @@ function BaoPrinciplesContent({ content }: { content: string }) {
   return <PrinciplesList principles={principles} />;
 }
 
-// Hưng: Current Challenges & Solutions
-function HungSolutionsContent({ content }: { content: string }) {
-  const currentChallenges = [
-    {
-      icon: "⚡",
-      title: "Thách thức hiện nay",
-      content:
-        "Toàn cầu hóa, hội nhập quốc tế, biến đổi kinh tế - xã hội tạo ra những thách thức mới cho vai trò lãnh đạo của Đảng.",
-      color: "red" as const,
-    },
-    {
-      icon: "🛡️",
-      title: "Giải pháp củng cố",
-      content:
-        "Đẩy mạnh đấu tranh chống tham nhũng, xây dựng Đảng trong sạch, vững mạnh, nâng cao uy tín trong nhân dân.",
-      color: "blue" as const,
-    },
-    {
-      icon: "🌱",
-      title: "Tương lai phát triển",
-      content:
-        "Tiếp tục đổi mới, hiện đại hóa, giữ vững niềm tin nhân dân trong thời kỳ mới.",
-      color: "green" as const,
-    },
-  ];
 
-  return (
-    <div className="space-y-12">
-      <ConceptGrid concepts={currentChallenges} />
-
-      <FoundationBlock
-        title="Kết luận"
-        content={
-          <p>
-            Niềm tin của nhân dân là nguồn sức mạnh to lớn của Đảng. Để củng cố
-            và phát triển niềm tin này, Đảng cần tiếp tục đổi mới, hoàn thiện
-            bản thân, luôn đặt lợi ích của nhân dân lên trên hết.
-          </p>
-        }
-      />
-    </div>
-  );
-}
