@@ -45,10 +45,10 @@ export default async function PersonPage({ params }: PersonPageProps) {
       {/* Header */}
       <AnimatedCard gradient={personInfo.gradient} className="mb-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gradient-bronze mb-4">
+          <h1 className="text-4xl font-bold text-slate-800 mb-4 font-inter tracking-tight">
             {personInfo.name}
           </h1>
-          <h2 className="text-xl text-gray-600 mb-4">
+          <h2 className="text-2xl text-slate-700 mb-4 font-inter font-semibold tracking-wide">
             {personInfo.title}
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto rounded-full" />
